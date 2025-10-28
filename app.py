@@ -437,14 +437,14 @@ def fact_checker_page():
 
 
 # --- 3. MAIN APP EXECUTION (NAVIGATION) ---
-
 PAGES = {
-    "1. Project Documentation (Start Here)": home_page,
-    "2. Core App: Debate Challenger": debate_app_page,
-    "3. Feature Demo: Fact Checker": fact_checker_page,
-    "4. Analytical Critique 1": critique_1_page,
-    "5. Analytical Critique 2": critique_2_page,
+    # ... (all 5 pages defined here) ...
 }
+
+# Use Streamlit sidebar for navigation
+st.sidebar.title("Capstone Portfolio Navigation")
+selection = st.sidebar.radio("Go to:", list(PAGES.keys()))
+# ... (rest of the code) ...
 
 # Use Streamlit sidebar for navigation
 st.sidebar.title("Capstone Portfolio Navigation")
